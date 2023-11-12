@@ -1,6 +1,6 @@
-import {DataTypes} from 'sequelize';
+const { DataTypes } = require('sequelize');
 
-module.exports = (sequelize) => {
+module.exports =  (sequelize) => {
     return sequelize.define(
         // 모델 이름
         'GlobalStat',
@@ -62,7 +62,6 @@ module.exports = (sequelize) => {
                 },
             ],
             timestamps: false,  // createAt, updateAt 컬럼을 사용하지 않음
-            
         }
     );
 }
