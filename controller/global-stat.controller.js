@@ -38,3 +38,9 @@ async function remove(req, res) {
     res.status(200).json({ result: 'success' });
 }
 
+module.exports = {
+    getAll,
+    insertOrUpdate,
+    remove,
+}
+
