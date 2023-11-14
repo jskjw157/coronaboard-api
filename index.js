@@ -11,7 +11,7 @@ async function launchServer() {
     });
 
     try {
-        await sequelize.sync();
+        await sequelize.sync({ alter: true });
         console.log('Database connection successful');
     } catch (error) {
         console.log('Database connection failed');
