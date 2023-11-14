@@ -23,3 +23,18 @@ async function insertOrUpdate(req, res) {
         await GlobalStat.update(req.body, { where: { cc, date }});
     }
 }
+
+async function remove(req, res) {
+    const { cc, date } = req.body;
+    if ( !cc || !date) {
+        res.status(400).json({ message: 'cc and date are required' });
+        return;
+    }
+
+    await GlobalStat.destroy({
+        where: { cc, date },
+    });
+
+    res.status(200).json({ result: 'success' });
+}
+
