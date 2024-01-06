@@ -19,4 +19,5 @@ module.exports = {
     sequelize,
     // 모델 정의
     GlobalStat: require('./global-stat.model')(sequelize),
+    KeyValue: require('./key-value.model')(sequelize),
 }
