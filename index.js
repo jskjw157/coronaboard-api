@@ -11,9 +11,9 @@ async function launchServer() {
         res.json({ message: 'Hello CoronaBoard!'});
     });
 
-    app.get('/global-stat', globalStatController.getAll);
-    app.post('global-stat', globalStatController.insertOrUpdate);
-    app.delete('global-stat', globalStatController.remove);
+    app.get('/global-stats', globalStatController.getAll);
+    app.post('/global-stats', globalStatController.insertOrUpdate);
+    app.delete('/global-stats', globalStatController.remove);
 
     try {
         await sequelize.sync({ alter: true });
